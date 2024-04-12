@@ -51,8 +51,7 @@ Within each folder, there are subfolders for each mammal category.
 
   We retrained the classification models using the grayscale images as input. This allowed us to assess how the performance of the models differs when using grayscale images compared to RGB images.
 
-## Model Evaluation
-### Initial Model Training
+## Mechine Learning Algorithms
 Three classification models were trained on the data:
 
 1) K-Nearest Neighbors (KNN)
