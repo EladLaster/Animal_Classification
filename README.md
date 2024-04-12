@@ -5,11 +5,12 @@ This project focuses on classifying images of mammals into five categories: dog,
 
 The goal is to develop machine learning models capable of accurately identifying the mammal depicted in a given image.
 
-## Authors
-* Yair Turgeman
-* Elad Laster
+## Authors:
 
-![2024-04-12](https://github.com/EladLaster/Animal_Classification/assets/118683420/df356bb8-defa-4a91-9c6f-dacca32055d3)
+### Yair Turgeman
+### Elad Laster
+
+![2024-04-12 (1)](https://github.com/EladLaster/Animal_Classification/assets/118683420/ec5f73ed-0eb3-44cf-9eb3-3c2e076bc09e)
 
 
 ## Dataset
