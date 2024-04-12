@@ -1,9 +1,14 @@
 # Animal Classification Project
 
 ## Overview
-This project focuses on classifying images of mammals into five categories: dog, cat, horse, lion, and elephant.
 
-The goal is to develop machine learning models capable of accurately identifying the mammal depicted in a given image.
+The main objective of this project is to perform image classification on a dataset consisting of images of five different mammal categories: dog, cat, horse, lion, and elephant.
+
+The ultimate goal is to develop machine learning models that can accurately determine the specific mammal species depicted in a given image.
+
+the primary aim of this project is to leverage machine learning techniques to build robust and accurate image classification models capable of identifying mammal species from images.
+
+Through rigorous data preparation, model development, and evaluation, we aim to achieve a high level of performance and contribute to the field of computer vision and image recognition.
 
 ## Authors:
 
@@ -103,6 +108,11 @@ This similarity can present a significant challenge for classification algorithm
 
 
 ## Conclusion
-The animal classification project demonstrates the effectiveness of machine learning models in identifying mammal species from images.
 
-Future work could involve refining preprocessing methods and exploring advanced classification algorithms to enhance model accuracy.
+In summary, our animal classification project employed machine learning techniques to classify mammal species from images.
+
+We found that while Logistic Regression performed best on RGB images, AdaBoost excelled on grayscale images.
+
+Our analysis revealed the challenge of distinguishing visually similar species, notably horses and elephants.
+
+Moving forward, exploring advanced algorithms and feature engineering could enhance accuracy and applicability in real-world scenarios.
