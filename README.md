@@ -115,4 +115,4 @@ We found that while Logistic Regression performed best on RGB images, AdaBoost e
 
 Our analysis revealed the challenge of distinguishing visually similar species, notably horses and elephants.
 
-Moving forward, exploring advanced algorithms and feature engineering could enhance accuracy and applicability in real-world scenarios.
+Looking ahead, further exploration of advanced algorithms and feature engineering could boost accuracy and make our approach more practical for real-world applications.
