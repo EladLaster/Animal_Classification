@@ -155,4 +155,9 @@ We found that while Logistic Regression performed best on RGB images before and 
 
 Our analysis revealed the challenge of distinguishing visually similar species, notably horses and elephants.
 
+Furthermore, The analysis revealed that grayscale images performed the worst, highlighting the importance of color in image classification.
+Notably, after implementing PCA, we achieved comparable results to those before PCA, but with significantly faster runtime.
+This underscores the effectiveness of PCA in maintaining classification accuracy while reducing computational burden.
+Hence, our conclusion affirms the utility of PCA, particularly in managing large datasets.
+
 Looking ahead, further exploration of advanced algorithms and feature engineering could boost accuracy and make our approach more practical for real-world applications.
