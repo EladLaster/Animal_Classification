@@ -56,13 +56,22 @@ Within each folder, there are subfolders for each mammal category.
 
   We retrained the classification models using the grayscale images as input. This allowed us to assess how the performance of the models differs when using grayscale images compared to RGB images.
 
+* Applying PCA (Dimensionality Reduction):
+
+  We employed Principal Component Analysis (PCA) to reduce the dimensionality of our dataset. PCA is a technique used to transform the original feature space into a new set of uncorrelated variables,   
+  known as principal components. By retaining as much information as possible while reducing the number of dimensions, PCA helps in simplifying the dataset and improving computational efficiency.
+
+* Classification Again on Images with the Models (On RGB using PCA):
+
+  We conducted classification once again, this time training the models using the reduced-dimensional data obtained from PCA, To see how this will affect the results.
+
 ## Mechine Learning Algorithms
-Three classification models were trained on the data:
+Four classification models were trained on the data:
 
 1) K-Nearest Neighbors (KNN)
-2) AdaBoost
+2) Logistic Regression
 3) Decision Tree
-4) Logistic Regression
+4) AdaBoost
 
 # Our Main Questions
 
@@ -83,11 +92,20 @@ The performance of each model was evaluated using a test set comprising 10% of t
 * Decision Tree: 40.93%
 * AdaBoost: 48.73%
 
-Upon reviewing the results, while Logistic Regression performed the best on color (RGB) images with an accuracy of 59.92%, it's worth noting that on grayscale images, AdaBoost outperformed other algorithms with an accuracy of 48.73%.
+*Model Performance with PCA (on RGB Images):*
 
-This indicates that AdaBoost might be better at capturing relevant features or patterns in grayscale images, contributing to its higher accuracy in this particular scenario.
+* KNN: 48.13%
+* Logistic Regression: 58.70%
+* Decision Tree: 42.40%
+* AdaBoost: 52.06%
+
+In our analysis, Logistic Regression emerged as the top performer for color (RGB) images,
+achieving an accuracy of 59.92% before PCA and 58.70% after PCA.
+However, when it came to grayscale images, AdaBoost surpassed other algorithms with an accuracy of 48.73%.
 
 ## 2) Are there types of mammals that are particularly similar and thus more difficult to classify?
+We build a confusion matrix after every aldorithem we use to see the similarity.
+
 *Most misclassifications between two mammals in Color (RGB) Images:*
 
 * KNN: 167 wrong classifications - Horse & Elephant
@@ -102,16 +120,38 @@ This indicates that AdaBoost might be better at capturing relevant features or p
 * Decision Tree: 88 wrong classifications - Horse & Elephant
 * AdaBoost: 77 wrong classifications - Horse & Elephant
 
+*Most misclassifications between two mammals after using CPA(on RGB Images):*
+
+* KNN: 132 wrong classifications - Horse & Elephant
+* Logistic Regression: 87 wrong classifications - Horse & Elephant
+* Decision Tree: 102 wrong classifications - Horse & Elephant
+* AdaBoost: 108 wrong classifications - Horse & Elephant
+
 Indeed, it's evident from our analysis that among the mammals in our dataset, the horse and elephant exhibit the highest degree of visual similarity.
 
 This similarity can present a significant challenge for classification algorithms, as discerning between these two species based solely on visual features may prove more challenging compared to distinguishing between other pairs of mammals in the dataset.
+
+## 3) Did using PCA on the images or converting them to grayscale lead to better results compared to classification on the original images?
+
+When analyzing the results, it's evident that the performance was poorest on grayscale images.
+This suggests that color is a crucial factor in image classification.
+It's reasonable to assume that in images with multiple colors, color serves as a vital aid in classification, thus resulting in improved performance.
+
+After implementing PCA for dimensionality reduction, we observed that the results were similar to those obtained before PCA.
+This is likely because, despite reducing the details and focusing primarily on the fundamental basis of the data, the quality of classification was not significantly compromised. By prioritizing the most informative features and discarding less relevant ones, PCA effectively maintains the integrity of the classification process while streamlining the computational complexity.
+
+Choosing to utilize the PCA method is indeed a significant step.
+Based on the results we've obtained, it seems that employing PCA has led to simultaneously reducing runtime - with results comparable to those prior to PCA.
+the use of this method appears beneficial in handling large datasets and enhancing the accessibility and efficiency of the models and their runtime. 
+
+### Therefore, we recommend incorporating PCA as part of the data analysis and classification process.
 
 
 ## Conclusion
 
 In summary, our animal classification project employed machine learning techniques to classify mammal species from images.
 
-We found that while Logistic Regression performed best on RGB images, AdaBoost excelled on grayscale images.
+We found that while Logistic Regression performed best on RGB images before and after PCA , AdaBoost excelled on grayscale images.
 
 Our analysis revealed the challenge of distinguishing visually similar species, notably horses and elephants.
 
