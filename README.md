@@ -99,9 +99,7 @@ The performance of each model was evaluated using a test set comprising 10% of t
 * Decision Tree: 42.40%
 * AdaBoost: 52.06%
 
-In our analysis, Logistic Regression emerged as the top performer for color (RGB) images,
-achieving an accuracy of 59.92% before PCA and 58.70% after PCA.
-However, when it came to grayscale images, AdaBoost surpassed other algorithms with an accuracy of 48.73%.
+In our analysis, Logistic Regression emerged as the top performer for color (RGB) images, achieving an accuracy of 60.00% before PCA and 58.67% after PCA. However, when it came to grayscale images, AdaBoost surpassed other algorithms with an accuracy of 48.46%.
 
 ## 2) Are there types of mammals that are particularly similar and thus more difficult to classify?
 We build a confusion matrix after every aldorithem we use to see the similarity.
@@ -133,17 +131,11 @@ This similarity can present a significant challenge for classification algorithm
 
 ## 3) Did using PCA on the images or converting them to grayscale lead to better results compared to classification on the original images?
 
-When analyzing the results, it's evident that the performance was poorest on grayscale images.
-This suggests that color is a crucial factor in image classification.
-It's reasonable to assume that in images with multiple colors, color serves as a vital aid in classification, thus resulting in improved performance.
+When analyzing the results, it's evident that the performance was poorest on grayscale images. This suggests that color is a crucial factor in image classification. It's reasonable to assume that in images with multiple colors, color serves as a vital aid in classification, thus resulting in improved performance.
 
-After implementing PCA for dimensionality reduction, we observed that the results were similar to those obtained before PCA.
-This is likely because, despite reducing the details and focusing primarily on the fundamental basis of the data, the quality of classification was not significantly compromised. By prioritizing the most informative features and discarding less relevant ones, PCA effectively maintains the integrity of the classification process while streamlining the computational complexity.
+After implementing PCA for dimensionality reduction, we observed that the results were similar to those obtained before PCA. This is likely because, despite reducing the details and focusing primarily on the fundamental basis of the data, the quality of classification was not significantly compromised. By prioritizing the most informative features and discarding less relevant ones, PCA effectively maintains the integrity of the classification process while streamlining the computational complexity.
 
-Choosing to utilize the PCA method is indeed a significant step.
-Based on the results we've obtained, it seems that employing PCA has led to simultaneously reducing runtime - with results comparable to those prior to PCA.
-the use of this method appears beneficial in handling large datasets and enhancing the accessibility and efficiency of the models and their runtime. 
-
+Choosing to utilize the PCA method is indeed a significant step. Based on the results we've obtained, it seems that employing PCA has led to simultaneously reducing runtime - with results comparable to those prior to PCA. the use of this method appears beneficial in handling large datasets and enhancing the accessibility and efficiency of the models and their runtime.
 ### Therefore, we recommend incorporating PCA as part of the data analysis and classification process.
 
 
@@ -154,10 +146,5 @@ In summary, our animal classification project employed machine learning techniqu
 We found that while Logistic Regression performed best on RGB images before and after PCA , AdaBoost excelled on grayscale images.
 
 Our analysis revealed the challenge of distinguishing visually similar species, notably horses and elephants.
-
-Furthermore, The analysis revealed that grayscale images performed the worst, highlighting the importance of color in image classification.
-Notably, after implementing PCA, we achieved comparable results to those before PCA, but with significantly faster runtime.
-This underscores the effectiveness of PCA in maintaining classification accuracy while reducing computational burden.
-Hence, our conclusion affirms the utility of PCA, particularly in managing large datasets.
 
 Looking ahead, further exploration of advanced algorithms and feature engineering could boost accuracy and make our approach more practical for real-world applications.
